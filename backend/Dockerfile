@@ -23,6 +23,6 @@ RUN pip3 install -r modules.txt
 COPY ./ .
 RUN a2enmod headers
 RUN  service apache2 restart
-EXPOSE 8080
+EXPOSE 8000
 RUN mkdir ${BASE_DIR}/${WEBSITE_NAME}
 ENTRYPOINT ["/bin/bash", "/var/www/start.sh"]

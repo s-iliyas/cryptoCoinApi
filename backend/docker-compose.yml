@@ -24,7 +24,7 @@ services:
       - ./start.sh:/var/www/start.sh
       - ../logs/server:/var/log/apache2:z
     ports:
-      - '8080:8080'
+      - '8000:8000'
     command: server
     depends_on:
       - db
