@@ -5,11 +5,7 @@ import axios from "axios";
 function App() {
   const coins = async () => {
     await axios
-      .get("https://49ca-2401-4900-1c74-29a8-ad11-8d9-775b-192f.in.ngrok.io/", {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+      .get("http://35.85.156.10:8000/?currency=inr")
       .then((data) => console.log(data))
       .catch((err) => console.log(err.message));
     return;
