@@ -3,7 +3,13 @@ from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
+from .serializers import CoinDataSerializer
+from .models import CoinData
 
+def mapFunction(x):
+    if not x["roi"]:
+        x["roi"] = {}
+    return x
 
 class HomeView(APIView):
     permission_classes = [AllowAny]
